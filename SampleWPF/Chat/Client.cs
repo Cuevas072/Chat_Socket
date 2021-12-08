@@ -34,10 +34,13 @@ namespace ChatUI.Chat
 
             try
             {
-                host = Dns.GetHostEntry("localhost");
-                addr = host.AddressList[0];
-                endPoint = new IPEndPoint(addr, 4404);
+                //host = Dns.GetHostEntry("localhost");
+                //addr = host.AddressList[0];
+                //endPoint = new IPEndPoint(addr, 4404);
+                IPEndPoint endPoint = new IPEndPoint(System.Net.IPAddress.Any, 4404);
                 socket = new Socket(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                socket.Bind(endPoint);
+                
             }catch(Exception e)
             {
                 

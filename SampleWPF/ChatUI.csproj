@@ -58,6 +58,7 @@
     </ApplicationDefinition>
     <Compile Include="Chat\Chat.cs" />
     <Compile Include="Chat\Client.cs" />
+    <Compile Include="Chat\IClient.cs" />
     <Compile Include="Chat\Message.cs" />
     <Compile Include="Chat\Serialization.cs" />
     <Compile Include="Chat\User.cs" />
