@@ -8,7 +8,7 @@ using Chat;
 
 namespace ChatUI.Chat
 {
-    public class Client
+    public class Client : IClient
     {
         //Events
         public delegate void UpdateDelegate(object o);
@@ -76,7 +76,6 @@ namespace ChatUI.Chat
                     this.AddUser((User)received);
                 }
             }
-           
         }
 
         /// <summary>
